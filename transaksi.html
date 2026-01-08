@@ -1,0 +1,80 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>seasaltmemories</title>
+  <link rel="icon" type="image/x-icon" href="icon.png">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="icon.png"/>
+      <h1>seasaltmemories</h1>
+    </div>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="beranda.html">Beranda</a></li>
+        <li><a href="transaksi.html" class="active">Transaksi</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container grid-2">
+    <section class="card">
+      <h2>Form Transaksi</h2>
+      <form id="formTransaksi" novalidate>
+        <div class="field">
+          <label for="namaTransaksi">Nama Transaksi</label>
+          <input type="text" id="namaTransaksi" name="namaTransaksi" />
+          <small class="error" data-error-for="namaTransaksi"></small>
+        </div>
+        <div class="field">
+          <label for="jumlah">Jumlah</label>
+          <input type="number" id="jumlah" name="jumlah" min="1"/>
+          <small class="error" data-error-for="jumlah"></small>
+        </div>
+        <div class="field">
+          <label for="kategori">Kategori</label>
+          <select id="kategori" name="kategori" required>
+            <option value=""></option>
+            <option value="Makanan">Makanan</option>
+            <option value="Minuman">Minuman</option>
+          </select>
+          <small class="error" data-error-for="kategori"></small>
+        </div>
+        <button type="submit" class="btn primary">Simpan</button>
+      </form>
+      <p><a href="#daftarTransaksi">Daftar Transaksi</a></p>
+    </section>
+    <section class="card" id="daftarTransaksi">
+      <h2>Daftar Transaksi</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nama Transaksi</th>
+            <th>Jumlah</th>
+            <th>Kategori</th>
+          </tr>
+        </thead>
+        <tbody id="tBodyTransaksi">
+          <tr>
+            <td>Lemon Tea</td>
+            <td>1</td>
+            <td>Minuman</td>
+          </tr>
+          <tr>
+            <td>Rice Bowl</td>
+            <td>1</td>
+            <td>Makanan</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>Copyright © 2026 seasaltmemories</p>
+  </footer>
+</body>
+</html>
